@@ -1,0 +1,36 @@
+{
+  "feature_names": [
+    "direction",
+    "ret_1",
+    "ret_4",
+    "ret_16",
+    "momentum_z8_96",
+    "range_16_norm",
+    "atr_14_norm",
+    "hour_sin",
+    "hour_cos",
+    "is_london",
+    "is_ny",
+    "is_overlap",
+    "factor_score_avg",
+    "factor_score_dispersion"
+  ],
+  "generated_at": "2026-05-12T10:23:07+00:00",
+  "metrics": {
+    "brier_tp1": 0.24850011521897805,
+    "brier_tp2": 0.21493912215636388,
+    "brier_tp3": 0.18198938341557455,
+    "precision_tp1_at_055": 0.5159883720930233,
+    "precision_tp1_at_060": 0.5454545454545454,
+    "train_loss_last": 1.625943696311034,
+    "train_rows": 17467.0,
+    "val_loss_last": 0.6386732527755348,
+    "val_rows": 4367.0
+  },
+  "min_app_version": "0.1.0",
+  "model_filename": "tp_nn_model.json",
+  "name": "xauusd_tp_nn_v1",
+  "sha256": "1461205ec0eb6e562f5f94499d77770a887a825a06b11f68b0cb4a02b328e1c5",
+  "size_bytes": 22109,
+  "version": "1461205ec0eb6e56"
+}

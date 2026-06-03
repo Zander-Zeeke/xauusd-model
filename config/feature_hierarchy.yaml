@@ -1,0 +1,36 @@
+fast_directional_drivers:
+  - xau_return_1s
+  - xau_return_1m
+  - usd_jpy_return_1m
+  - dxy_proxy_return_1m
+  - real_yield_change
+  - macro_surprise_z
+
+microstructure_lite:
+  - oanda_spread_bp
+  - ig_spread_bp
+  - source_divergence_bp
+  - quote_freshness_ms
+  - ofi_l1_proxy_z
+  - rv_1m
+  - bv_1m
+  - jump_component
+
+slow_state_conditioners:
+  - cftc_positioning
+  - etf_flow_proxy
+  - gdelt_geopolitical_attention
+  - central_bank_demand_proxy
+  - physical_demand_proxy
+
+gates:
+  - data_freshness_gate
+  - spread_gate
+  - event_window_gate
+  - source_divergence_gate
+  - model_calibration_gate
+
+naming_policy:
+  simulation_mode: l1_conservative
+  l1_order_flow_name: ofi_l1_proxy
+  true_order_flow_name_reserved_for_paid_depth: ofi_true

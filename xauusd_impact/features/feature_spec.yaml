@@ -1,0 +1,41 @@
+version: feature_spec_v1
+simulation_mode: l1_conservative
+ordered_features:
+  - xau_return_sum_bp
+  - xau_return_last_bp
+  - xau_range_bp
+  - rv
+  - bv
+  - jump_component
+  - quote_count
+  - source_count
+  - spread_abs_last
+  - spread_bp_last
+  - spread_bp_mean
+  - spread_bp_p95
+  - quote_freshness_ms_last
+  - quote_freshness_ms_p95
+  - rx_latency_ms_p95
+  - source_divergence_bp_max
+  - ofi_l1_proxy_sum
+  - ofi_l1_proxy_last
+  - is_asia
+  - is_london
+  - is_ny
+  - is_overlap
+  - is_comex_open_window
+horizons_sec:
+  - 1
+  - 5
+  - 60
+  - 300
+  - 900
+  - 3600
+order_flow:
+  l1_name: ofi_l1_proxy
+  true_name_reserved: ofi_true
+formulas:
+  return_bps: "10000 * log(mid_t / mid_t-1)"
+  realized_variance: "sum(r^2)"
+  bipower_variation: "mu1^-2 * sum(|r_t| |r_t-1|), mu1=sqrt(2/pi)"
+  jump_component: "max(RV - BV, 0)"
